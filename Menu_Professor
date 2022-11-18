@@ -1,0 +1,75 @@
+import{View,Text,SafeAreaView,StyleSheet,ImageBackground,TouchableOpacity,Image,Button} from "react-native";
+import chat from './assets/chat.png';
+import comunicado from './assets/comunicado.png';
+import contracheque from './assets/contracheque.png';
+import ponto from './assets/ponto.png';
+import boletim from './assets/boletim.png';
+import turmas from './assets/turmas.png';
+export default function App()  {
+  return(
+    <SafeAreaView>
+      <View style = {styles.area1}>
+        <ImageBackground style={styles.logo} source={{uri:'https://www.gov.br/cbpf/pt-br/modelo-de-capa/imagens/fundo-abstrato-azul-01_1150x500.jpg/@@images/image'}} resizemode = "contain"/>
+        <Text style = {styles.texto}>Bem Vindo, Professor</Text>
+      </View>
+      <View style = {styles.area2}>
+        <TouchableOpacity style = {styles.botao1}>
+          <Image source = {contracheque} style = {styles.contracheque}/>
+          <Text style = {styles.texto_botao}>Contracheque</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style = {styles.botao2}>
+          <Image source = {chat} style = {styles.chat}/>
+          <Text style = {styles.texto_botao2}>Chat</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style = {styles.botao3}>
+          <Image source = {comunicado} style = {styles.comunicado}/>
+          <Text style = {styles.texto_botao}>Comunicados</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style = {styles.botao4}>
+          <Image source = {ponto} style = {styles.ponto}/>
+          <Text style = {styles.texto_botao}>Ponto</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style = {styles.botao5}>
+          <Image source = {turmas} style = {styles.turmas}/>
+          <Text style = {styles.texto_botao}>Turmas</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style = {styles.botao6}>
+         <Image source = {boletim} style = {styles.boletim}/>
+          <Text style = {styles.texto_botao}>Boletim</Text>
+        </TouchableOpacity>
+      </View>
+
+    </SafeAreaView>
+
+
+  );
+}
+const styles = StyleSheet.create({
+    texto : {color:"white",fontSize: 25, fontWeight: 'bold',alignSelf: 'center'},
+    area1: {height:150},
+    area2: {height:300},
+  logo: {
+    width: '100%',
+    height: '100%',
+    marginBottom: '-5.5rem',
+    zIndex:'-1',
+  },
+  botao1: { backgroundColor:'#f5f5f5',shadowColor:"grey",shadowOpacity : 0.5,shadowOffset:{width:5,height:5,},borderRadius: 4,width: 100,height:100,top: 10,left:10,position:'relative'},
+  botao2: { backgroundColor:'#f5f5f5',shadowColor:"grey",shadowOpacity : 0.5,shadowOffset:{width:5,height:5,},borderRadius: 4,width: 100,height:100,top: -90,left:120,
+  position:'relative'},
+  botao3: { backgroundColor:'#f5f5f5',shadowColor:"grey",shadowOpacity : 0.5,shadowOffset:{width:5,height:5,},borderRadius: 4,width: 100,height:100,top: -190,left:230,
+  position:'relative'},
+  botao4: { backgroundColor:'#f5f5f5',shadowColor:"grey",shadowOpacity : 0.5,shadowOffset:{width:5,height:5,},borderRadius: 4,width: 100,height:100,top: -180,left:10,position:'relative'},
+  botao5: { backgroundColor:'#f5f5f5',shadowColor:"grey",shadowOpacity : 0.5,shadowOffset:{width:5,height:5,},borderRadius: 4,width: 100,height:100,top: -280,left:120,
+  position:'relative'},
+  botao6: { backgroundColor:'#f5f5f5',shadowColor:"grey",shadowOpacity : 0.5,shadowOffset:{width:5,height:5,},borderRadius: 4,width: 100,height:100,top: -380,left:230,
+  position:'relative'},
+  texto_botao: {top:35, alignSelf:'center' ,position:'relative'},
+  texto_botao2: {top:30, alignSelf:'center' ,position:'relative'},
+  contracheque:{width: 40,height:40,top: 30,left:30,position:'relative'},
+  chat:{width: 45,height:45,top: 30,left:30,position:'relative'},
+  comunicado:{width: 40,height:40,top: 30,left:30,position:'relative'},
+  ponto:{width: 40,height:40,top: 30,left:30,position:'relative'},
+  turmas:{width: 40,height:40,top: 30,left:30,position:'relative'},
+  boletim:{width: 40,height:40,top: 30,left:30,position:'relative'},
+});
