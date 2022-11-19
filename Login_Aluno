@@ -1,0 +1,55 @@
+import { View, StyleSheet, Text,Image, TextInput, Pressable,SafeAreaView} from 'react-native';
+export default function App() {
+  return (
+    <SafeAreaView>
+      <View style={styles.area1}>
+        <Image style={styles.logo} source={{uri:'https://s2.glbimg.com/gwumXsVS3KffUtr7JN2yxF1ZkdI=/620x455/e.glbimg.com/og/ed/f/original/2019/01/16/dicas-para-escolher-a-escola-dos-filhos.jpg'}} />
+      </View>
+      <View style={styles}>
+        <Text style={styles.titulo}>Login Aluno </Text>
+        <TextInput placeholder='Matricula' placeholderTextColor='#aaaaaa' style={styles.input}/>
+        <TextInput
+          secureTextEntry={true} placeholder='Senha' placeholderTextColor='#aaaaaa' style={styles.input}/>
+        <Pressable style={styles.button}> Entrar </Pressable>
+      </View>
+    </SafeAreaView>
+  );
+}
+const styles = StyleSheet.create({
+  area1 : {height: 230},
+  logo: {
+    width: '100%',
+    height: '100%',
+  },
+  input: {
+    width: '85%',
+    height: '5%',
+    backgroundColor: 'white',
+    color: '#00008b',
+    marginTop: '2rem',
+    padding: '1rem 0.5rem',
+    borderRadius: '0.4rem',
+    outline: 'solid',
+    alignSelf: 'center'
+  },
+  button: {
+    width: '92%',
+    margin: '2rem',
+    backgroundColor: '#00008b',
+    color: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '0.8rem',
+    borderRadius: '1rem',
+    alignSelf:'center'
+  },
+  titulo: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: "#00008b",
+    position:"relative",
+    top: 15,
+    alignSelf: "center"
+  }
+});
