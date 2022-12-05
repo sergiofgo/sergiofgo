@@ -1,0 +1,77 @@
+import {TouchableOpacity,Image, Text,TextInput,Pressable,View,StyleSheet,SafeAreaView} from 'react-native';
+import logo from './assets/faeterj_img.jpg'
+import cadeado from './assets/cadeado.png'
+import dialogo from './assets/dialogo.png'
+import pix from './assets/pix.png'
+export default function App () {
+
+  return (
+    <SafeAreaView style = {styles.box}>
+    <View style = {styles.box1}>
+      <Image source = {logo} style = {styles.faeterj}/>
+      <Text style = {styles.texto1}>Banco Faeterj</Text>
+    </View>
+
+    <View style = {styles.box2}>
+      <Text style = {styles.texto2}>Minha Conta: </Text>
+      <Text style = {styles.texto3}>Agencia:**03 </Text>
+      <Text style = {styles.texto4}>Conta Corrente:**23-6 </Text>
+      
+      <Pressable title="Acessar Conta" onPress={() => Linking.openURL('https://www.google.com/')}style = {styles.botao}>Acessar Conta</Pressable>
+    </View>
+
+    <View style = {styles.box3}>
+      <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com/')}>
+        <Image source = {pix} style = {styles.pix}/>
+      </TouchableOpacity>
+     
+       <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com/')}>
+        <Text style = {styles.texto6}>Ana</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com/')}>
+        <Text style = {styles.texto7}>Pix</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com/')}>
+        <Image source = {dialogo} style = {styles.dialogo}/>
+      </TouchableOpacity>
+
+       <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com/')}>
+        <Image source = {cadeado} style = {styles.cadeado}/>
+      </TouchableOpacity>
+      
+      <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com/')}>
+        <Text style = {styles.texto5}>Chave de Seguranca</Text>
+      </TouchableOpacity>
+    </View>
+    </SafeAreaView>
+
+  );
+}
+
+const styles = StyleSheet.create ({
+  box: {backgroundColor: "f5f5dc"},
+  box1: { height: 30},
+  box2: { height: 60},
+  box3: {},
+  faeterj:{width:100, height: 50,
+  },
+  cadeado:{width:25, height: 25,marginLeft:20,marginTop:240
+  },
+  pix:{width:20, height: 20,left:255,top:320, position:"relative"
+  },
+  dialogo:{width:32, height: 32,left:140,top:273, position:"relative"
+  },
+  botao:{width: '85%',backgroundColor: '#000080',alignItems: 'center',color: 'white',fontWeight: "Bold",padding: '1rem',borderRadius: '2rem',top:210, left:15, position: 'relative'},
+
+texto1:{color:"#000080",fontFamily:"Consolas", left: 120,top: -39,fontWeight: "Bold",fontSize:22, position:"relative"},
+
+  texto2:{color:"#000080",fontFamily:"Consolas",left: 100, top: 100,position:"relative"},
+  texto3:{color:"#000080",fontFamily:"Consolas",left: 100, top: 130,position:"relative"},
+  texto4:{color:"#000080",fontFamily:"Consolas",left: 70, top: 163,position:"relative"},
+  texto5:{color:"#000080",fontFamily:"Consolas",fontSize: 7,fontWeight: "Bold",marginTop:6},
+  texto6:{color:"#000080",fontFamily:"Consolas",fontSize: 9,fontWeight: "Bold",marginLeft:148,top:320, position:"relative"},
+  texto7:{color:"#000080",fontFamily:"Consolas",fontWeight: "Bold",fontSize: 9,marginLeft:257,top:310, position:"relative"},
+
+});
